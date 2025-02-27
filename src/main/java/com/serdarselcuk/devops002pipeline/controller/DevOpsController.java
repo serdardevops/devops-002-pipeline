@@ -16,7 +16,7 @@ public class DevOpsController {
     // http://127.0.0.1:8081/
     @GetMapping
     public String devopshello() {
-        return "Devops World: " + LocalDateTime.now();
+        return "CANINI YERIM: " + LocalDateTime.now();
     }
 
     // http://127.0.0.1:8081/info
