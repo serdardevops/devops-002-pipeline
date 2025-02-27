@@ -26,7 +26,6 @@ pipeline {
             steps {
               script{
                     withCredentials([string(credentialsId: 'dockerhub', variable: 'dockerhub')]) {
-                     //bat 'docker login -u serdardevops -p dckr_pat_LTgLWBx1obez_YmA_S4XC4wx3N8'
 
                      bat 'echo docker login -u serdardevops -p ${dockerhub}'
                      bat 'docker image push serdardevops/my-application'
@@ -35,10 +34,11 @@ pipeline {
             }
         }
 
-        stage('Deoploy Kubernetes') {
+        stage('Deploy Kubernetes') {
             steps {
               script {
                     kubernetesDeploy (configs: 'deploymentservice.yaml',kubeconfigId: 'kubernetes' )
+                }
             }
         }
     }
