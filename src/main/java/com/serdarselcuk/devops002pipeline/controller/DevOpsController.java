@@ -16,8 +16,8 @@ public class DevOpsController {
     //  http://localhost:8081
     @GetMapping
     public String devopsHello() {
-        System.out.println("DevOps Hello : " + LocalDateTime.now());
-        return "DevOps Hello : " + LocalDateTime.now();
+        System.out.println("CANINI YERIM : " + LocalDateTime.now());
+        return "CANINI YERIM : " + LocalDateTime.now();
     }
 
     //  http://localhost:8081/info
