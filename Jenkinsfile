@@ -52,7 +52,7 @@ pipeline {
 
         stage('Docker Image to Clean') {
             steps {
-                bat 'echo Docker Image to Clean'
+                bat 'docker image prune -f'
             }
         }
     }
