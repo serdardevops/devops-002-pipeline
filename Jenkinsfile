@@ -16,6 +16,12 @@ pipeline {
         }
 
 
+        stage('Unit Test') {
+            steps {
+                bat 'Unit Test'
+            }
+        }
+
         stage('Docker Image') {
             steps {
                 bat 'docker build -t serdardevops/my-application .'
@@ -40,6 +46,12 @@ pipeline {
               script {
                     kubernetesDeploy (configs: 'deploymentservice.yaml',kubeconfigId: 'kubernetes' )
                 }
+            }
+        }
+
+        stage('Docker Image to Clean') {
+            steps {
+                bat 'echo Docker Image to Clean'
             }
         }
     }
