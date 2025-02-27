@@ -1,4 +1,4 @@
-package com.serdarselcuk.devops002pipeline.controller;
+package com.serdardevops.controller;
 
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,21 +8,25 @@ import org.springframework.web.bind.annotation.RestController;
 import java.time.LocalDateTime;
 
 
-// http://127.0.0.1:8081/
+//  http://localhost:8081
 @RestController
 @RequestMapping
 public class DevOpsController {
 
-    // http://127.0.0.1:8081/
+    //  http://localhost:8081
     @GetMapping
-    public String devopshello() {
-        return "CANINI YERIM: " + LocalDateTime.now();
+    public String devopsHello() {
+        System.out.println("DevOps Hello : " + LocalDateTime.now());
+        return "DevOps Hello : " + LocalDateTime.now();
     }
 
-    // http://127.0.0.1:8081/info
+    //  http://localhost:8081/info
     @GetMapping("/info")
-    public String Info() {
-        return "DEVOPS INFO : " + LocalDateTime.now();
+    public String info() {
+        System.out.println("DEVOPS INFO : " + LocalDateTime.now());
+        //return "DEVOPS INFO : " + LocalDateTime.now();
+        return "DEVOPS INFO : ";
+
     }
 
 }
