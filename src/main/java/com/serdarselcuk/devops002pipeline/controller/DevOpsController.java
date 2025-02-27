@@ -1,4 +1,4 @@
-package com.serdardevops.controller;
+package com.serdarselcuk.devops002pipeline.controller;
 
 
 import org.springframework.web.bind.annotation.GetMapping;
